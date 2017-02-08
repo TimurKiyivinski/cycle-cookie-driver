@@ -1,0 +1,25 @@
+{
+  "name": "cycle-cookie-driver",
+  "version": "1.0.0",
+  "description": "A cookie driver for Cycle.js",
+  "main": "src/makeCookieDriver.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimurKiyivinski/cycle-cookie-driver.git"
+  },
+  "keywords": [
+    "cycle",
+    "cookie",
+    "xstream",
+    "driver"
+  ],
+  "author": "Timur Kiyivinski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TimurKiyivinski/cycle-cookie-driver/issues"
+  },
+  "homepage": "https://github.com/TimurKiyivinski/cycle-cookie-driver#readme"
+}
