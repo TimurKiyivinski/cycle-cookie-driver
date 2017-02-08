@@ -3,11 +3,11 @@ Cookie driver for Cycle.js that wraps around [js-cookie](https://github.com/js-c
 
 ## installation
 Install with NPM
-```
+```bash
 npm install --save cycle-cookie-driver
 ```
 Make sure to configure your build tool to compile the dependency from `node_modules/`. If you're using Webpack, your Babel loader entry might look like this:
-```
+```javascript
 {
   test: /\.js$/,
   loader: 'babel-loader',
@@ -21,18 +21,18 @@ Make sure to configure your build tool to compile the dependency from `node_modu
 
 ## usage
 Import into your ES6 code:
-```
+```javascript
 import { makeCookieDriver } from 'cycle-cookie-driver'
 ```
 Register the driver:
-```
+```javascript
 const drivers = {
   ...
   cookie: makeCookieDriver()
 }
 ```
 Request format for `cookie` sink:
-```
+```javascript
 {
   category: 'getCounter',
   action: 'get',
@@ -41,17 +41,17 @@ Request format for `cookie` sink:
 ```
 All requests wrap around `js-cookie` methods, hence `get, getJSON, set, remove` methods along with all arguments are supported.
 Params are applied to the `Cookie` instance as so: 
-```
+```javascript
 const data = Cookies[action](...params)
 ```
 The data received is passed to an optional callback, for example:
-```
+```javascript
 const getCounterCookie$ = sources.cookie.select('getCounter')
 ```
 
 ## sample
 As there is no cookie `onchange` event from the browser, the only way to check for updates is to periodically poll a cookie.
-```
+```javascript
 import xs from 'xstream'
 import { div, p } from '@cycle/dom'
 
