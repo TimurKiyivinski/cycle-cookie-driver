@@ -1,10 +1,12 @@
 {
   "name": "cycle-cookie-driver",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A cookie driver for Cycle.js",
-  "main": "src/makeCookieDriver.js",
+  "main": "dist/makeCookieDriver.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dist": "babel src -d dist --presets=es2015,babili --no-babelrc",
+    "prepublish": "npm run dist"
   },
   "repository": {
     "type": "git",
@@ -25,5 +27,10 @@
   "dependencies": {
     "js-cookie": "^2.1.3",
     "xstream": "^10.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-babili": "0.0.11",
+    "babel-preset-es2015": "^6.22.0"
   }
 }

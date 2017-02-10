@@ -6,18 +6,6 @@ Install with NPM
 ```bash
 npm install --save cycle-cookie-driver
 ```
-Make sure to configure your build tool to compile the dependency from `node_modules/`. If you're using Webpack, your Babel loader entry might look like this:
-```javascript
-{
-  test: /\.js$/,
-  loader: 'babel-loader',
-  exclude: /node_modules\/(?!cycle-cookie-driver)/,
-  query: {
-    presets: ['es2015'],
-    plugins: ['babel-plugin-transform-es2015-destructuring', 'babel-plugin-transform-object-rest-spread']
-  }
-}
-```
 
 ## usage
 Import into your ES6 code:
